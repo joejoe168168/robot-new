@@ -4,29 +4,25 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "gemini-balance-do",
+	"name": "website-proxy",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-08-05",
 	"migrations": [
 		{
-			"new_sqlite_classes": ["LoadBalancer"],
+			"new_sqlite_classes": ["WebsiteProxy"],
 			"tag": "v1"
 		}
 	],
 	"durable_objects": {
 		"bindings": [
 			{
-				"class_name": "LoadBalancer",
-				"name": "LOAD_BALANCER"
+				"class_name": "WebsiteProxy",
+				"name": "WEBSITE_PROXY"
 			}
 		]
 	},
 	"observability": {
 		"enabled": true
-	},
-	"vars": { 
-		"AUTH_KEY": "ajielu",
-		"HOME_ACCESS_KEY": "7b18e536c27ab304266db3220b8e000db8fbbe35d6e1fde729a1a1d47303858d"
 	},
 	/**
 	 * Smart Placement
